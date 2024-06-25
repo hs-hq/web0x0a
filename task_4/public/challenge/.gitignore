@@ -1,0 +1,4 @@
+/target
+test.db
+.env
+sessions/

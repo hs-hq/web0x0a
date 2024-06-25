@@ -1,0 +1,35 @@
+version: '3.5'
+
+services:
+  database:
+    image: postgres
+    environment:
+      POSTGRES_USER: ${POSTGRES_USER:-db}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:-db}
+      PGDATA: /data/postgres
+      POSTGRES_DB: db
+    healthcheck:
+      test: pg_isready -U db -d db
+      interval: 10s
+      timeout: 3s
+      retries: 3
+    restart: unless-stopped
+  server:
+    container_name: server_container
+    build:
+      context: ./code
+    restart: on-failure
+    depends_on:
+      database:
+        condition: service_healthy
+    ports:
+      - 3000:3000
+    environment:
+      DATABASE_URL: "postgres://db:db@database:5432/db"
+      PORT: 3000
+      HOST: localhost
+      SECRET_KEY: "REDACTED"
+      ADMIN_PASSWORD: "Password_whichever_you_want"
+
+volumes:
+  postgres:

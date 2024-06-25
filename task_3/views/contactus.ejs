@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<title>Neta</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link href="https://fonts.googleapis.com/css?family=Roboto:300,400,700" rel="stylesheet">
+	<link rel="shortcut icon" type="image/x-icon" href="images/favicon.png">
+	<link rel="stylesheet" href="static/css/bootstrap.min.css">
+	<link rel="stylesheet" href="static/css/animate.css">
+	<link rel="stylesheet" href="static/css/font-awesome.min.css">
+	<link rel="stylesheet" href="static/css/swiper.min.css">
+	<link rel="stylesheet" href="static/css/lightcase.css">
+	<link rel="stylesheet" href="static/css/style.css">
+</head>
+
+<body class="body-padding">
+	<!-- Start Header -->
+	<!-- Start Header -->
+	<header class="header">
+		<div class="container">
+			<nav class="navbar navbar-expand-lg p-lg-0">
+				<a class="navbar-brand logo" href="/"><img src="images/logo/01.png" alt="logo"></a>
+				<a class="navbar-brand logo" href="/"><img src="images/logo/02.png" alt="logo"></a>
+				<button class="navbar-toggler" type="button" data-toggle="collapse"
+					data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+					aria-label="Toggle navigation">
+					<span class="fa fa-bars"></span>
+				</button>
+
+				<div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="nav navbar-nav ml-auto">
+                        <li><a href="/">Home</a></li>
+                        <li><a href="/volunteers">Volunteer</a></li>
+                        <li><a href="/about">About Us</a></li>
+                        <li><a href="/contact">Contact</a></li>
+                        <% if (loggedIn) { %>
+                            <li><a href="/user/logout"> Logout</a></li>
+                            <% if (isAdmin) { %>
+                                <li><a href="/admin"> Admin Portal </a></li>
+                            <% } %>
+                        <% } else {%>
+                            <li><a href="/user/login">Login</a></li>
+                            <li><a href="/user/register">Register</a></li>
+                        <% } %>
+
+
+                    </ul>
+                </div>
+			</nav>
+		</div>
+	</header>
+	<!-- End Header -->
+	<!-- End Header -->
+
+
+
+	<!-- start page header -->
+	<section class="page-header">
+		<div class="overlay">
+			<div class="container">
+				<div class="page-header-content">
+					<h2>Contact Us</h2>
+					<ul class="breadcrumb">
+						<li><a href="#">Home</a></li>
+						<li>Contact Us</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</section>
+	<!-- end page header -->
+
+
+
+	<!-- contact section start here -->
+	<section class="contact-section section-bg-color">
+		<div class="section-padding-140">
+			<div class="container">
+				<div class="contact-area">
+					<div class="row justify-content-center">
+						<div class="col-lg-4">
+							<div class="contact-info">
+								<h3>Contact Info</h3>
+								<ul class="contact-info-list">
+									<li>
+										<div class="contact-info-item">
+											<span class="icon"><i class="fa fa-map-marker"></i></span>
+											<span class="text">Wilson, North Koroline, USA</span>
+										</div>
+									</li>
+									<li>
+										<div class="contact-info-item">
+											<span class="icon"><i class="fa fa-phone"></i></span>
+											<span class="text">0847 87443837 <br> 0847 87478373</span>
+										</div>
+									</li>
+									<li>
+										<div class="contact-info-item">
+											<span class="icon"><i class="fa fa-envelope"></i></span>
+											<span class="text">contactinfo@yourmail.com <br> websiteinfo.com</span>
+										</div>
+									</li>
+									<li>
+										<div class="contact-info-item">
+											<span class="icon"><i class="fa fa-envelope"></i></span>
+											<span class="text">websiteinfo.com</span>
+										</div>
+									</li>
+								</ul>
+							</div>
+						</div>
+						<div class="col-lg-8">
+							<div class="ccr-section">
+								<h3 class="section-title">Leave a Comment</h3>
+								<div class="comment-response">
+									<form action="#">
+										<input type="text" class="name" name="name" placeholder="Name">
+										<input type="text" class="email" name="E-mail" placeholder="E-mail">
+										<input type="text" class="phone" name="phone" placeholder="Phone">
+										<textarea name="massage" id="massage" placeholder="Massage"></textarea>
+										<input type="submit" value="Submit">
+									</form>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<!-- contact section ending here -->
+
+
+
+	<!-- map section start here -->
+	<div class="map-area map2">
+		<div id="map">
+			<iframe
+				src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3652.2357231582737!2d90.38435681543143!3d23.73897209512869!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3755b85c71927841%3A0xde102c300beb3f0c!2sWebCode%20Institute!5e0!3m2!1sen!2sbd!4v1602061355944!5m2!1sen!2sbd"
+				allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+		</div>
+	</div>
+	<!-- map section ending here -->
+
+
+
+
+
+	<!-- start footer section -->
+	<footer class="footer-section">
+		<div class="footer-top section-padding-100">
+			<div class="container">
+				<div class="row justify-content-center">
+					<div class="col-lg-4 col-sm-6">
+						<div class="widget">
+							<a class="navbar-brand logo" href="/"><img src="images/logo/02.png" alt="logo"></a>
+							<p>Globally brand stand-alone processes and enable methods of empowerment. Efficient provide
+								access to world wide methods vis-a-vis revolution.</p>
+							<ul class="contact-info">
+								<li><i class="fa fa-map-marker"></i>Rodney Square,Wilmington USA</li>
+								<li><i class="fa fa-phone"></i>4588 957 8457</li>
+								<li><i class="fa fa-envelope"></i>contact@yourmail.com</li>
+							</ul>
+							<ul class="social-media">
+								<li><a class="facebook" href="#"><i class="fa fa-facebook"></i></a></li>
+								<li><a class="twitter" href="#"><i class="fa fa-twitter"></i></a></li>
+								<li><a class="linkedin" href="#"><i class="fa fa-linkedin"></i></a></li>
+							</ul>
+						</div>
+					</div>
+					<div class="col-lg-4 col-sm-6">
+						<div class="widget">
+							<h5>Recent News</h5>
+							<div class="small-post-list">
+								<div class="post-item">
+									<div class="post-thumb">
+										<a href="single.html"><img src="images/small-thumb/01.jpg" alt="thumb"></a>
+									</div>
+									<div class="post-content">
+										<a href="single.html">Holisticly fashion multimedia based synergy vis-a-vis
+											granular.</a>
+										<ul class="post-meta">
+											<li>26 March, 2020</li>
+										</ul>
+									</div>
+								</div>
+								<div class="post-item">
+									<div class="post-thumb">
+										<a href="single.html"><img src="images/small-thumb/02.jpg" alt="thumb"></a>
+									</div>
+									<div class="post-content">
+										<a href="single.html">Holisticly fashion multimedia based synergy vis-a-vis
+											granular.</a>
+										<ul class="post-meta">
+											<li>26 March, 2020</li>
+										</ul>
+									</div>
+								</div>
+								<div class="post-item">
+									<div class="post-thumb">
+										<a href="single.html"><img src="images/small-thumb/03.jpg" alt="thumb"></a>
+									</div>
+									<div class="post-content">
+										<a href="single.html">Holisticly fashion multimedia based synergy vis-a-vis
+											granular.</a>
+										<ul class="post-meta">
+											<li>26 March, 2020</li>
+										</ul>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="col-lg-4 col-sm-6">
+						<div class="widget">
+							<h5>Recent Tweets</h5>
+							<div class="tweet-list">
+								<div class="tweet-item">
+									<div class="tweet-thumb">
+										<a href="#"><img src="images/tweet/01.png" alt="thumb"></a>
+									</div>
+									<div class="tweet-content">
+										<a class="name" href="#">Stella Gabriella <span>@stellagabriella</span></a>
+										<p>Holisticly fabricate state of the art growth. <a href="#">#webenabled</a>
+											band: <a href="#">stella.org/your-voice.</a></p>
+									</div>
+								</div>
+								<div class="tweet-item">
+									<div class="tweet-thumb">
+										<a href="#"><img src="images/tweet/01.png" alt="thumb"></a>
+									</div>
+									<div class="tweet-content">
+										<a class="name" href="#">Stella Gabriella <span>@stellagabriella</span></a>
+										<p>Holisticly fabricate state of the art growth. <a href="#">#webenabled</a>
+											band: <a href="#">stella.org/your-voice.</a></p>
+									</div>
+								</div>
+								<div class="tweet-item">
+									<div class="tweet-thumb">
+										<a href="#"><img src="images/tweet/01.png" alt="thumb"></a>
+									</div>
+									<div class="tweet-content">
+										<a class="name" href="#">Stella Gabriella <span>@stellagabriella</span></a>
+										<p>Holisticly fabricate state of the art growth. <a href="#">#webenabled</a>
+											band: <a href="#">stella.org/your-voice.</a></p>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="footer-bottom">
+			<p>&copy; 2020 <a href="/">Neta</a>Designed By <a href="https://themeforest.net/user/Labartisan/portfolio"
+					target="_blank">Labartisan</a></p>
+		</div>
+	</footer>
+	<!-- end footer section -->
+</body>
+
+</html>

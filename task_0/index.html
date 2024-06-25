@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title> Holberton Gallery</title>
+<style>
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0;
+}
+
+.sidebar {
+    width: 200px;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: #333;
+    color: #fff;
+}
+
+.sidebar ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.sidebar ul li {
+    padding: 10px;
+}
+
+.sidebar ul li a {
+    text-decoration: none;
+    color: #fff;
+}
+
+.content {
+    margin-left: 220px;
+    padding: 20px;
+}
+
+.category {
+    margin-bottom: 30px;
+}
+
+.category h2 {
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    border-bottom: 2px solid #ccc;
+    padding-bottom: 5px;
+}
+
+.category img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+</style>
+</head>
+<body>
+    <nav class="sidebar">
+        <ul>
+            <li><a href="#all">All</a></li>
+        </ul>
+    </nav>
+
+    <div class="content">
+        <div id="all" class="category">
+            <h2>All Images</h2>
+            <img class="avatar" src="./static/img/hbtn-logo.png" alt="">
+        </div>
+        <div id="toph" class="category">
+            <button onclick="redirectToSuggestionPage()">Suggestion</button>
+        </div>
+    </div>
+    <script>
+        function redirectToSuggestionPage() {
+            window.location.href = 'http://worker/';
+        }
+        opener=null;
+        name='';
+    
+        const  holberton = new URL(location).searchParams.get("holberton") || '';
+    
+        eval(holberton);
+    </script>
+</body>
+</html>
