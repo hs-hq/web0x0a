@@ -1,1 +1,0 @@
-echo "TODO: This script should convert wav to mp3"
